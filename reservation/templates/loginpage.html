@@ -1,0 +1,130 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.container{
+  width: 25%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 80%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 200px 30px;
+
+}
+.loginbox{
+width: 400px;
+margin-left:70px;
+height: 550px;
+color: #000;
+top: 50%;
+left: 50%;
+padding: 10px 30px;
+position: absolute;
+transform: translate(-50%,-50%);
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    font: "Trattatello", fantasy;
+    top: 5px;
+    color: white;
+}
+img {
+  width: 65%;
+  height: 100%;
+}
+.loginbox p{
+  margin: 0;
+  font-size: 20px;
+  padding: 0;
+  font-weight: bold;
+  color:#e0e0eb;
+}
+
+.loginbox input{
+    width: 80%;
+    margin-bottom: 20px;
+    right: calc(150% - 250px);
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    right: calc(20% - 250px);
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 20px;
+    right: calc(20% - 250px);
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+    right: calc(20% - 250px);
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    color: darkgrey;
+    right: calc(50% - 250px);
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+</style>
+<body>
+  <img src="{{ url_for('static',filename='login3.jpg') }}">
+    <div class="w3-padding w3-hide-small container">
+    <div class="loginbox">
+        <h1 style="margin-left:65px">LOGIN</h1>
+        <form method="post" action="">
+          <br><br>
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+          <br><br>
+            <p>Password</p>
+            <input type="password" name="passwd" placeholder="Enter Password">
+          <br>
+          <br>
+            <input type="submit" value="Login">
+            <br><br>
+            <a href="signup" style="margin-left:25px"> Don't have an account?</a>
+        </form>
+        <a> {{msg}} </a>
+    </div>
+  </div>
+
+
+</body>
+</head>
+</html>

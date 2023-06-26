@@ -1,0 +1,246 @@
+<header>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  body {
+    background:white;
+    color: white;
+    font-family: Helvetica-neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    margin: 35px;
+  }
+  a:hover{
+    text-decoration: none;
+    background-color: pink;
+  }
+  </style>
+
+  <div class="w3-bar w3-wide w3-left-align">
+     <a href="home"> TRAVELLOPEDIA</a>
+     <div class="w3-right">
+     <a href="home"> HOME </a>
+     <a href="history"> HISTORY </a>
+     <a href="wallet"> WALLET </a>
+     <a href="login"> LOGOUT </a>
+   </div>
+  </div>
+</header>
+
+
+
+<html>
+    <head>
+        <title>Sign Up</title>
+    </head>
+    <style>
+
+        body{
+          background-image: url("{{ url_for('static',filename='bg.jpg') }}");
+          background-size: cover;
+          background-position: center;
+          font-family: sans-serif;
+        }
+
+        .form-wrap{
+          width: 320px;
+          background: #3e3d3d;
+          padding: 40px 20px;
+          box-sizing: border-box;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        h1{
+          text-align: center;
+          color: #fff;
+          font-weight: normal;
+          margin-bottom: 20px;
+        }
+
+        input{
+          width: 100%;
+          background: none;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          padding: 6px 15px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        input[type="button"]{
+          background: #bac675;
+          border: 0;
+          cursor: pointer;
+          color: #3e3d3d;
+        }
+        input[type="button"]:hover{
+          background:#a4b15c;
+          transition: .6s;
+        }
+
+        ::placeholder{
+          color: #fff;}
+
+          table {
+          	background: black;
+          	border-collapse: separate;
+          	box-shadow: inset 0 1px 0 #fff;
+          	font-size: 18px;
+          	line-height: 24px;
+          	margin: 30px auto;
+          	text-align: center;
+          	width: 800px;
+          }
+          th {
+        	border-left: 1px solid #555;
+        	border-right: 1px solid #777;
+        	border-top: 1px solid #555;
+        	border-bottom: 1px solid #333;
+        	box-shadow: inset 0 1px 0 #999;
+        	color: white;
+          font-weight: bold;
+        	padding: 10px 15px;
+        	position: relative;
+        	text-shadow: 0 1px 0 #000;
+        }
+        td {
+          color: white;
+        	border-right: 1px solid #fff;
+        	border-left: 1px solid #e8e8e8;
+        	border-top: 1px solid #fff;
+        	border-bottom: 1px solid #e8e8e8;
+        	padding: 10px 15px;
+        	position: relative;
+        	transition: all 300ms;
+        }
+        tbody:hover td {
+        	color: transparent;
+        	text-shadow: 0 0 3px #aaa;
+        }
+
+        tbody:hover tr:hover td {
+        	color: white;
+        	text-shadow: 0 1px 0 #fff;
+        }
+    </style>
+    <body>
+
+        <div class="form-wrap">
+
+
+            <form method="post" action="">
+                <h1>Sign Up</h1>
+                <input type="text" name="Name" placeholder="Name" required pattern="\S+.*"/>
+                <input type="text" name="Username" placeholder="Username" required pattern="\S+.*"/>
+                <input type="email" name="Email" placeholder="Email" required pattern="\S+.*"/>
+                <input type="password" name="Password" placeholder="Password" required pattern="\S+.*"/>
+                <input type="password" name="Conf_pass" placeholder="Confirm Password" required pattern="\S+.*"/>
+                <input type="submit" value="Sign Up">
+            </form>
+            {{msg}}
+
+        </div>
+
+
+
+    </body>
+
+
+
+</html>
+
+
+
+<html>
+    <head>
+        <title>Sign Up</title>
+    </head>
+    <style>
+
+        body{
+          background-image: url("{{ url_for('static',filename='bg.jpg') }}");
+          background-size: cover;
+          background-position: center;
+          font-family: sans-serif;
+        }
+
+        .form-wrap{
+          width: 320px;
+          background: #3e3d3d;
+          padding: 40px 20px;
+          box-sizing: border-box;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        h1{
+          text-align: center;
+          color: #fff;
+          font-weight: normal;
+          margin-bottom: 20px;
+        }
+
+        input{
+          width: 100%;
+          background: none;
+          border: 1px solid #fff;
+          border-radius: 3px;
+          padding: 6px 15px;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        input[type="button"]{
+          background: #bac675;
+          border: 0;
+          cursor: pointer;
+          color: #3e3d3d;
+        }
+        input[type="button"]:hover{
+          background:#a4b15c;
+          transition: .6s;
+        }
+
+        ::placeholder{
+          color: #fff;}
+    </style>
+    <body>
+
+        <div class="form-wrap">
+
+
+            <form method="post" action="">
+                <h1>Sign Up</h1>
+                <input type="text" name="Name" placeholder="Name" required pattern="\S+.*"/>
+                <input type="text" name="Username" placeholder="Username" required pattern="\S+.*"/>
+                <input type="email" name="Email" placeholder="Email" required pattern="\S+.*"/>
+                <input type="password" name="Password" placeholder="Password" required pattern="\S+.*"/>
+                <input type="password" name="Conf_pass" placeholder="Confirm Password" required pattern="\S+.*"/>
+                <input type="submit" value="Sign Up">
+            </form>
+            {{msg}}
+
+        </div>
+
+
+
+    </body>
+
+https://www.hdwallpapers.in/download/downtown_moscow_russia_panorama-3840x1200.jpg
+
+</html>

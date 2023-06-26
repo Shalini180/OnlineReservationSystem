@@ -1,0 +1,120 @@
+<html>
+<header>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+body {
+  background:black;
+  color: white;
+  font-family: Helvetica-neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+a{
+  text-decoration: none;
+  font-size: 18px;
+  margin: 35px;
+}
+a:hover{
+  text-decoration: none;
+  background-color: pink;
+}
+
+section.feature-box.choices{
+background-color: black;
+}
+section.feature-box.choices div{
+  margin:auto;
+  padding-top: 30px;
+  }
+section.feature-box.choices figure {
+      text-align: center;
+}
+section.feature-box.choices figure img{
+    width:380px;
+    height:255px;
+    border-radius: 10px;
+}
+ section{
+  background: black;
+  color: gray;
+  padding: 20px;
+  display: flex;
+}
+img.mainimage{
+  height: 550px;
+  width: 2000px;
+}
+footer {
+  background: black;
+  padding: 10px 20px;
+}
+.container {
+  position: relative;
+}
+
+.image {
+  display: block;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 380px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+</style>
+
+<div class="w3-bar w3-wide w3-left-align">
+   <a href="home"> TRAVELLOPEDIA</a>
+   <div class="w3-right">
+   <a href="home"> HOME </a>
+   <a href="wallet"> WALLET </a>
+   <a href="login"> LOGOUT </a>
+ </div>
+</div>
+</header>
+
+<img class="mainimage" src="{{ url_for('static',filename='homepage.jpg') }}">
+<section class="feature-box choices">
+
+  <div class="container"><a href="flight_index">
+      <figure>
+        <img src="https://i.pinimg.com/originals/dd/91/4c/dd914c6cca076f8cebb463a81e73e7e5.jpg" >
+        <div class="overlay">BOOK FLIGHT TICKETS</div>
+      </figure>
+  </a></div>
+
+  <div class="container"><a href="bus_index">
+    <figure>
+      <img src="https://wallpapercave.com/wp/wp3779033.jpg">
+      <div class="overlay">BOOK BUS TICKETS</div>
+    </figure>
+  </a></div>
+
+  <div class="container"><a href="train_index">
+    <figure>
+      <img src="https://www.wallpaperflare.com/static/74/382/427/sunset-silver-train-bounce-f1-4-wallpaper.jpg">
+      <div class="overlay">BOOK TRAIN TICKETS</div>
+    </figure>
+  </a></div>
+
+</section>
+</html>

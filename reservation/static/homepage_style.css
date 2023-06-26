@@ -1,0 +1,26 @@
+body {
+  background:black;
+  color: white;
+  font-family: Helvetica-neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+a{
+  text-decoration: none;
+  font-size: 17px;
+  margin: 35px;
+}
+a:hover{
+  text-decoration: none;
+  background-color: pink;
+}
+
+footer {
+  background: black;
+  padding: 10px 20px;
+}

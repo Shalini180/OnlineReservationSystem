@@ -1,0 +1,155 @@
+<header>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  body {
+    background:white;
+    color: black;
+    font-family: Helvetica-neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    background-color: black;
+    color:white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  a{
+    text-decoration: none;
+    font-size: 18px;
+    margin: 35px;
+  }
+  a:hover{
+    text-decoration: none;
+    background-color: pink;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column {
+  float: left;
+  width: 33.33%;
+}
+
+  .column tbody ,.column tr{display:grid;}
+  .column tbody{grid-template-columns:repeat(2,1fr);}
+  .column tr{grid-auto-rows:1fr;}
+
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+.row p{
+  font-size: 20px;
+  font-weight: bold;
+  color:black;
+}
+  </style>
+
+
+  <div class="w3-bar w3-wide w3-left-align">
+     <a href="home"> TRAVELLOPEDIA</a>
+  </div>
+</header>
+
+<body>
+  <h1 style="margin-left: 540px; margin-top: 30px"> Ticket Successfully Booked </h1>
+  <div class="row">
+    <centre>
+    <div class="column" style="margin-left: 200px; margin-top: 30px">
+      <p>FROM</p>
+      <br>
+<table style="width:90%">
+  <tbody>
+  <tr>
+    <th>AIRPORT-ID:</th>
+    <td>{{source[0][0]}}</td>
+  </tr>
+  <tr>
+    <th>AIRPORT-NAME:</th>
+    <td>{{source[0][1]}}</td>
+  </tr>
+  <tr>
+    <th>STATE:</th>
+    <td>{{source[0][2]}}</td>
+  </tr>
+  <tr>
+    <th>COUNTRY:</th>
+    <td>{{source[0][3]}}</td>
+  </tr>
+  </tbody>
+</table>
+    </div>
+
+    <div class="column" style="margin-left: 100px; margin-top: 30px">
+      <p>TO</p>
+      <br>
+      <table style="width:90%">
+        <tbody>
+        <tr>
+          <th>AIRPORT-ID:</th>
+          <td>{{dest[0][0]}}</td>
+        </tr>
+        <tr>
+          <th>AIRPORT-NAME:</th>
+          <td>{{dest[0][1]}}</td>
+        </tr>
+        <tr>
+          <th>STATE:</th>
+          <td>{{dest[0][2]}}</td>
+        </tr>
+        <tr>
+          <th>COUNTRY:</th>
+          <td>{{dest[0][3]}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </centre>
+    <br>
+    </div>
+    <div class="column" style="margin-left:500px; margin-top: 50px">
+      <table style="width:100%">
+        <tr>
+          <th>AIRLINE-ID:</th>
+          <td>{{flight[0][7]}}</td>
+        </tr>
+        <tr>
+          <th>AIRLINE-NAME:</th>
+          <td>{{flight[0][8]}}</td>
+        </tr>
+        <tr>
+          <th>FLIGHT-CODE:</th>
+          <td>{{flight[0][0]}}</td>
+        </tr>
+        <tr>
+          <th>ARRIVAL:</th>
+          <td>{{flight[0][3]}}</td>
+        </tr>
+        <tr>
+          <th>DEPARTURE:</th>
+          <td>{{flight[0][4]}}</td>
+        </tr>
+        <tr>
+          <th>AMT. PAYED:</th>
+          <td>{{flight[0][6]}}</td>
+        </tr>
+      </table>
+    </div>
+</body>

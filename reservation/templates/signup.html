@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Sign Up</title>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color:black;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.loginbox{
+width: 400px;
+margin-left:40px;
+height: 550px;
+color: #000;
+top: 45%;
+left: 10%;
+position: absolute;
+transform: translate(-50%,-50%);
+}
+img{
+  margin-top: 0px;
+  margin-left:489px;
+  padding: 0;
+  position: fixed;
+  width: 1200px;
+  height: 800px;
+  object-fit: cover;
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+  font: "Trattatello", fantasy;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  color: white;
+}
+
+input{
+    width: 100%;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0px 20px;
+    margin-left:80px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    width:300px;
+    height:45px}
+
+input[type="submit"]{
+  background: #bac675;
+  border: 0;
+  cursor: pointer;
+  color: #3e3d3d;
+  margin-left:150px;
+  width:150px}
+
+input[type="submit"]:hover{
+  background:#a4b15c;
+  transition: .6s;}
+
+  ::placeholder{color: white;}
+
+    </style>
+</head>
+<body>
+      <img src="https://www.itl.cat/pngfile/big/46-466832_free-inspirational-travel-desktop-amp-phone-wallpaper-traveling.jpg" >
+      <div class="loginbox">
+      <h1>SIGN UP</h1>
+            <form method="post" action="" id=form1>
+              <input type="text" name="Name" placeholder="Name" required pattern="\S+.*"/>
+              <input type="text" name="Username" placeholder="Username" required pattern="\S+.*"/>
+              <input type="email" name="Email" placeholder="Email" required pattern="\S+.*"/>
+              <input type="password" name="Password" placeholder="Password" required pattern="\S+.*"/>
+              <input type="password" name="Conf_pass" placeholder="Confirm Password" required pattern="\S+.*"/>
+              <input type="submit" value="Sign Up">
+
+            </form>
+              {{msg}}
+      </div>
+</body>
+</html>
